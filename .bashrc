@@ -86,16 +86,24 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
+
+
+
 # some more aliases
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias ucsdrepo='cd ~/automation/behave_testing/tests/content/cisco/ucs'
 alias autorepo='cd ~/automation'
-alias templates='cd ~/automation/behave_testing/tests/content/common'
+alias trepo='cd ~/automation/behave_testing/tests/content/common'
 alias em7repo='cd ~/em7'
 alias ucsdlib='cd ~/em7/G3code/content/python/cisco/ucs_director'
-alias barge='cd ls'
+
+
+
+
+
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -122,18 +130,27 @@ fi
 
 
 #extra Terminal stuff like a colored cursor thingy
-#PS1='\[\e[1;91m\][\u@\h \w]\$\[\e[0m\] '
+PS1='\[\e[1;91m\][\u@\h \w]\$\[\e[0m\] '
 
 #Path and default application stuff
 export PATH="$PATH:/home/whouston/tools/archanist/bin"
 export PATH="$PATH:/home/whouston/tools/arcanist/bin"
 export EDITOR=vim
 export PYTHONPATH="${PYTHONPATH}:/home/whouston/automation"
-export GITAWAREPROMPT=~/.bash/git-aware-prompt
-source "${GITAWAREPROMPT}/main.sh"
+export GITAWAREPROMPT=~/.bash/git-prompt.sh
+source "${GITAWAREPROMPT}"
 
 
 SILO_AUTO_SUT=JBS_PATCH_AIO_10.2.8.11
 SILO_CFG_ROOT=/home/whouston/automation
-UCSDdevicesAndApps=UCSDirector.UCSDdevicesAndApps.UCSDdevicesAndAppAlignment.json
+
+
+
+
+
+
+
+
+
+
 
