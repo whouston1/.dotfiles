@@ -56,6 +56,11 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+
+
+
+# Editing $PS1 variable 
+
 if [ "$color_prompt" = yes ]; then
     #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
     PS1="\${debian_chroot:+(\$debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
@@ -64,6 +69,12 @@ else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
 unset color_prompt force_color_prompt
+
+
+
+
+
+
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
@@ -85,21 +96,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
-
-
-
-
-# some more aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-alias ucsdrepo='cd ~/automation/behave_testing/tests/content/cisco/ucs'
-alias autorepo='cd ~/automation'
-alias trepo='cd ~/automation/behave_testing/tests/content/common'
-alias em7repo='cd ~/em7'
-alias ucsdlib='cd ~/em7/G3code/content/python/cisco/ucs_director'
-
-
 
 
 
@@ -130,27 +126,19 @@ fi
 
 
 #extra Terminal stuff like a colored cursor thingy
-PS1='\[\e[1;91m\][\u@\h \w]\$\[\e[0m\] '
+PS1='\[\e[1;91m\][\u@\h \w]\$\[\e[0m\]$git_branch$ '
+
 
 #Path and default application stuff
 export PATH="$PATH:/home/whouston/tools/archanist/bin"
 export PATH="$PATH:/home/whouston/tools/arcanist/bin"
 export EDITOR=vim
 export PYTHONPATH="${PYTHONPATH}:/home/whouston/automation"
-export GITAWAREPROMPT=~/.bash/git-prompt.sh
-source "${GITAWAREPROMPT}"
+export GITAWAREPROMPT=~/.bash/git-aware-prompt
+source "${GITAWAREPROMPT}/main.sh"
 
 
 SILO_AUTO_SUT=JBS_PATCH_AIO_10.2.8.11
 SILO_CFG_ROOT=/home/whouston/automation
-
-
-
-
-
-
-
-
-
 
 
