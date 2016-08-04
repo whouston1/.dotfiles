@@ -4,13 +4,16 @@ filetype off                  " required
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+:set hlsearch
 
 
-
+colo murphy
+syntax on
+set number
 
 autocmd vimenter * NERDTree
 
-
+Plugin 'flazz/vim-colorschemes'
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
@@ -24,7 +27,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
-Plugin 'L9'
+"Plugin 'L9'
 " Git plugin not hosted on GitHub
 Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
