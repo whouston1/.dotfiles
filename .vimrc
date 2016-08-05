@@ -4,6 +4,8 @@ filetype off                  " required
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+
+" Highlights all instances when you search for words
 :set hlsearch
 
 
@@ -12,22 +14,20 @@ call vundle#begin()
 " colo murphy
 " syntax on
 
-" Sets line numbering, below
-set number
 
+" NerdTree show hidden files
+let NERDTreeShowHidden=1
 
 "Nerd tree upon login 
 autocmd vimenter * NERDTree
 
 
-
-
 " plugin for landscape theme
 Plugin 'itchyny/landscape.vim'
 
+Plugin 'davidhalter/jedi-vim'
 
-
-
+Plugin 'Valloric/YouCompleteMe.git'
 
 Plugin 'flazz/vim-colorschemes'
 " alternatively, pass a path where Vundle should install plugins
@@ -35,42 +35,7 @@ Plugin 'flazz/vim-colorschemes'
 
 " let Vundle manage Vundle, required
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 Plugin 'VundleVim/Vundle.vim'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -105,7 +70,10 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+autocmd BufNewFile,BufRead *.json set ft=javascript
 
 colorscheme jellybeans 
 syntax on
 set number
+
+let g:ycm_python_binary_path = 'python'
