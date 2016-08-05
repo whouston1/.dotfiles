@@ -7,18 +7,70 @@ call vundle#begin()
 :set hlsearch
 
 
-colo murphy
-syntax on
+" Commented out below because I am using a different theme now. 
+" Love murphy theme though
+" colo murphy
+" syntax on
+
+" Sets line numbering, below
 set number
 
+
+"Nerd tree upon login 
 autocmd vimenter * NERDTree
+
+
+
+
+" plugin for landscape theme
+Plugin 'itchyny/landscape.vim'
+
+
+
+
 
 Plugin 'flazz/vim-colorschemes'
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Plugin 'VundleVim/Vundle.vim'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -54,5 +106,6 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-
-
+colorscheme jellybeans 
+syntax on
+set number
