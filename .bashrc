@@ -130,13 +130,17 @@ PS1='\[\e[1;91m\][\u@\h \w]\$\[\e[0m\]$git_branch$ '
 
 
 #Path and default application stuff
+
+
+
+export TERM=xterm-256color
 export PATH="$PATH:/home/whouston/tools/archanist/bin"
 export PATH="$PATH:/home/whouston/tools/arcanist/bin"
 export EDITOR=vim
 export PYTHONPATH="${PYTHONPATH}:/home/whouston/automation"
 export GITAWAREPROMPT=~/.bash/git-aware-prompt
 source "${GITAWAREPROMPT}/main.sh"
-
+source ~/.bash_functions
 
 SILO_AUTO_SUT=JBS_PATCH_AIO_10.2.8.11
 SILO_CFG_ROOT=/home/whouston/automation
