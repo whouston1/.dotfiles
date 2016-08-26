@@ -25,7 +25,7 @@ autocmd vimenter * NERDTree
 " plugin for landscape theme
 Plugin 'itchyny/landscape.vim'
 
-Plugin 'davidhalter/jedi-vim'
+" Plugin 'davidhalter/jedi-vim'
 
 Plugin 'Valloric/YouCompleteMe.git'
 
@@ -70,10 +70,16 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-autocmd BufNewFile,BufRead *.json set ft=javascript
+
+" autocmd BufNewFile,BufRead *.json set ft=javascript
 
 colorscheme jellybeans 
 syntax on
 set number
 
-let g:ycm_python_binary_path = 'python'
+" let g:ycm_python_binary_path = 'python'
+
+
+
+
+
